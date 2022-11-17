@@ -1,0 +1,216 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgba(200, 200, 200); */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    226deg,
+    rgba(117, 84, 160, 1) 7%,
+    rgba(117, 84, 160, 1) 17%,
+    rgba(106, 95, 168, 1) 29%,
+    rgba(99, 103, 174, 1) 44%,
+    rgba(87, 116, 184, 1) 66%,
+    rgba(70, 135, 198, 1) 83%,
+    rgba(44, 163, 219, 1) 96%,
+    rgba(22, 188, 237, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.modalContainer {
+  /* width: 500px;
+    height: 500px; */
+    width: 360px;
+    height: 410px;
+  border-radius: 12px;
+  /* background-color: white; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+  align-items: center;
+}
+
+/* .modalContainer .title { */
+/* display: inline-block;
+    text-align: center;
+    margin-top: 10px; */
+
+/* text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    width: 100%; */
+
+/* } */
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  } */
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  } */
+
+/* .modalContainer .footer button {
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 10px;
+   
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+    width: 56%;
+  }
+   */
+
+.signupinput  {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width:  73%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.signup span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+.signup span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.signup:hover span {
+  padding-right: 25px;
+}
+.signup:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.signinbtn{
+  margin-left: 66px;
+  border-radius: 15px;
+  border: ridge;
+  background-color: white;
+  color: rgb(172, 23, 23);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px 66px;;
+  width: 49%;
+}
+
+.signinbtn button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+
+.closebtn {
+  border-radius: 15px;
+  border: ridge;
+  background-color: white;
+  color: rgb(172, 23, 23);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+  width: 49%;
+  
+}
+
+.closebtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+  /* top: -3px; */
+}
+
+.closebtn span:after {
+
+  /* content: "\00bb"; */
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+
+}
+.closebtn:hover span {
+  padding-left: 25px;
+}
+.closebtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.titlename {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: -45px;
+}

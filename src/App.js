@@ -8,6 +8,7 @@ import Wrapper from "./components/Wrapper";
 function App() {
   return (
     <div>
+      {/* startig app */}
       <Wrapper />
     </div>
   );

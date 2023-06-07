@@ -1,0 +1,28 @@
+.calls {
+    width: 100%;
+    height: 492px;
+    text-align: center;
+    /* align-items: end; */
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    justify-content: center;
+    /* boxShadow: "rgb(231 231 231) -15px 0px 10px -10px " */
+    /* box-shadow: rgp(231 231 231) -15px 0px 10px -10px; */
+    box-shadow: rgb(231 231 231) -15px 0px 10px -10px;
+}
+#calendarTitle {
+display: none;
+}
+/* span#calendarTitle {
+    display: none;
+} */
+
+
+
+
+/* .calls p {
+    position: absolute;
+    width: 94%;
+    height: 500px;
+} */

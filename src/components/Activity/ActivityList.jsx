@@ -68,13 +68,13 @@ let unactiveStyle = {
 
 
 function ActivityList() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   
-  useEffect(() => {navigate('/activity/Root1')}, [])
+  // useEffect(() => {navigate('/activity/Root1')}, [])
   return (
 
     <div style={{ display: "flex", boxShadow: "rgb(231 231 231) -15px 0px 10px -10px " }}>
-      <div style={{ display: "flex", flexDirection: "column", textDecoration: "none", height: "485px", padding: "5px", width: "260px"}}>
+      <div style={{ display: "flex", flexDirection: "column", textDecoration: "none", height: "482px", padding: "5px", width: "260px"}}>
         <Label>Activities</Label>
         {/* <div className="listeditems"> */}
           {Activities.map((item, index) => (

@@ -75,14 +75,36 @@ const teamsdata = [
     }
 ]
 
+
+
+
 const Containner = styled.div`
+    display: flex;
+    flex-direction: column;
+
+`
+
+const SecBox = styled.button`
+    border: none;
+    /* border: 1px solid; */
+    border-top: 1px solid rgb(215 183 189);;
+    height: 50px;
+    font-size: small;
+    color: grey;
+    background-color: transparent;
+    cursor : pointer
+    
+    ` 
+
+const Box = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
     /* background-color: aliceblue; */
     /* box-shadow: 0px 1px 3px 1px #888888; */
     /* height: 495px; */
-    height: 463px;
+    height: 446px;
+    
 `
 const Label = styled.h2`
      margin-left: 10px;
@@ -120,13 +142,17 @@ const unactiveStyle = {
 textDecoration:"none",
 color : "black"
 }
+
+
+
 const TeamsList = () => {
   return (
     <>
-    <div className='teamstab' style={{boxShadow: "rgb(231 231 231) -15px 0px 10px -10px ", display : "flex", height: '500px'}} >
-     <Containner>
+    <div className='teamstab' style={{boxShadow: "rgb(231 231 231) -15px 0px 10px -10px ", display : "flex", overflow : "hidden", height : "92vh"}} >
+    <Containner>
+     <Box>
         <Label>Teams</Label>
-       
+
         {
           teamsdata.map((item, index) => <div start={{display : "flex", flexDirection : "column"}}  key={index}> 
         <NavLink  to={`${item.name}`} state={item} style={({ isActive }) => (isActive ? activeStyle : unactiveStyle)}>
@@ -134,14 +160,21 @@ const TeamsList = () => {
         <Wrapper> 
             {item?.name}
         </Wrapper>
-
         </NavLink>
         
-       
            </div>
-            )}
 
-    </Containner>  
+            )
+        }
+
+    </Box>
+    <SecBox>
+    <NavLink to="/routes" state={teamsdata} style={{textDecoration: "none", color : "grey"}}>
+    <i className="fi fi-rr-user-add" style={{marginRight: "15px"}} /> 
+         Join and create team
+    </NavLink>
+         </SecBox>
+    </Containner>
     <Outlet />
     </div>
      </>

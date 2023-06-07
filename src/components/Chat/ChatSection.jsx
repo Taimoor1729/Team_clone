@@ -92,12 +92,13 @@ useEffect(() => {
       <div className="inputofchat">
         <input className="chatinput" placeholder="type your message here" 
                  value={input}
-                 onChange={(e) => setInput(e.target.value)}/>
+                 onChange={(e) => setInput(e.target.value)} />
         <div>
          
           <button className="chatbtn" onClick={storedata}>
             <i className="fi fi-rr-paper-plane"></i>
           </button>
+
         </div>
       </div>
      

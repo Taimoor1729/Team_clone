@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./moddel.css";
 
@@ -15,15 +16,22 @@ function Model({ closeModal }) {
     email : "",
    });
 
-   useEffect(() => {
-    localStorage.setItem('form', JSON.stringify(state))
-   }, [state])
- 
+  
 
-  const handleSubmit =  (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log("in Model page", e)
-  }
+
+
+await axios
+.post("http://localhost:5000/register", {
+  username : state.username,
+  email : state.email,
+  password : state.password,
+}).then ((res) => console.log("inside of the register api res", res), navigate("/modal"))
+.catch((err) => console.log("inside of the register api error", err))
+
+}
 
   function handleChange(evt) {
     const value = evt.target.value;
@@ -70,7 +78,7 @@ function Model({ closeModal }) {
             required
           />
           <div align="center" className="signinbtn">
-            <button type="submit" className="signup" onClick={() => navigate('/chat/ali')}>
+            <button type="submit" className="signup" >
               <span>Sign Up</span>
             </button>
           </div>

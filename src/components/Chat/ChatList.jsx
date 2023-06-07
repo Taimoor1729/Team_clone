@@ -78,7 +78,7 @@ let unactiveStyle = {
   color: "#757575",
   marginBottom: "10px",
   position: "relative",
- gap: "15px",
+  gap: "15px",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "spaceAround",
@@ -90,11 +90,11 @@ let unactiveStyle = {
 const ChatList = () => {
 const navigate = useNavigate()
 
-useEffect(() => {navigate('/chat/ali')},[])
+useEffect(() => {navigate('/chat/ali')},[]) 
 
   return (
     <div style={{ display: "flex" , boxShadow: "rgb(231 231 231) -15px 0px 10px -10px "}}>
-      <div style={{ display: "flex", flexDirection: "column", height: "485px", padding: "5px"}}>
+      <div style={{ display: "flex", flexDirection: "column", height: "467px", padding: "5px"}}>
         <Label>Chat</Label>
 
         {contacts.map((item, index) => 

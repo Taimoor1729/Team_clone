@@ -7,14 +7,10 @@ import { NavLink } from "react-router-dom";
 const Containner = styled.div`
   align-items: center;
   padding: 2px;
-  /* &:hover {
-    width: 60px;
-    height: 60px;
-    color: #444791;
-    cursor: pointer;
-    background-color: white; 
-    align-items: center;
-  } */
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+
 `;
 const SidebarTop = styled.div`
   display: flex;
@@ -24,13 +20,15 @@ const SidebarTop = styled.div`
   align-items: center;
   padding: 10px 0px;
   cursor: pointer;
+  flex: 1;
 
   &:hover {
  
     color: #444791;
     cursor: pointer;
     background-color: white; //#f5f5f5
-    align-items: center;
+    /* align-items: center; */
+    
   }
 `;
 
@@ -79,7 +77,7 @@ const SideNav = () => {
   return (
     <div>
       <Containner>
-        <div>
+        <div style={{flex: 1}}>
           {DataTop.map((item, index) => (
             <NavLink to={item.path} style={({ isActive }) => (isActive ? activeStyle : unactiveStyle)} key={index} >
               <SidebarTop>
@@ -90,13 +88,13 @@ const SideNav = () => {
           ))}
         </div>
 
-        {/* <div style={{ marginTop: "28px", textAlign:"center" }}>
+        <div style={{ marginTop: "28px", textAlign:"center" }}>
           {DataBottom.map((item, index) => (
             <SidebarBottom key={index} >
               {item.icon} {item.name}
             </SidebarBottom>
           ))}
-        </div> */}
+        </div>
       </Containner>
     </div>
   );

@@ -1,0 +1,6 @@
+.frame iframe{
+    position: absolute;
+    width: 94%;
+    height: 500px;
+    /* background-color: aqua; */
+}

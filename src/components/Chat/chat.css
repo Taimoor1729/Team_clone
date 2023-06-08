@@ -25,17 +25,18 @@
     margin-top: 4px ; 
   }
   
-  .chatbtn {
-    margin-left: 5px;
-    margin-top: 9px;
+  .chatbtns {
+    /* margin-left: 5px; */
+    /* margin-top: 9px; */
     border: none;
     background-color: transparent;
     cursor: pointer !important;
+    padding-top: 11px;
   }
   
   .chat-section-data {
     /* border: 1px solid #333333; */
-    width: 71%;
+    width: 77.5%;
     height: 73%;
     overflow-y: scroll;
     position: absolute;

@@ -12,7 +12,7 @@ const StyledHeading = styled.section`
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  width: 99%;
+  width:  139%;
   > .heading {
     margin-right: 50px;
     float: right;
@@ -75,17 +75,17 @@ useEffect(() => {
           style={{
             backgroundColor: "rgb(81, 57, 62)",
             textAlignLast: "end",
-            padding: "0px 20px",
+            // padding: "0px 20px",
             width: "51%",
             float: "right",
             display:"flex",
             flexDirection: "column",
             marginBottom: "10px",
-            
+            marginRight: "30px"
           }}
           ref={chatContainer}
         >
-          <p style={{ backgroundColor: " #51393e", color: "white", margin: "5px" }}>{item}</p>
+          <p style={{ backgroundColor: " #51393e", color: "white", margin: "4px" , paddingRight: "20px"}}>{item}</p>
         </div>
       ))}
       </div>
@@ -93,9 +93,9 @@ useEffect(() => {
         <input className="chatinput" placeholder="type your message here" 
                  value={input}
                  onChange={(e) => setInput(e.target.value)} />
-        <div>
+        <div style={{marginLeft: "12px"}}>
          
-          <button className="chatbtn" onClick={storedata}>
+          <button className="chatbtns" onClick={storedata}>
             <i className="fi fi-rr-paper-plane"></i>
           </button>
 

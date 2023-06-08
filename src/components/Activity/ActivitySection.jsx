@@ -10,7 +10,7 @@ const StyledHeading = styled.section`
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  width: 780px;
+  width: 1115px;
   > .heading {
     margin-right: 50px;
     float: right;

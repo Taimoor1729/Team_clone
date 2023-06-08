@@ -16,14 +16,17 @@ const SideBar = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-flex: 1;
+/* flex: 1; */
 color: white;
+width: 62px;
 `
 const Middle = styled.div`
 display: flex;
-flex: 3;
+/* flex: 3; */
 justify-content: flex-start;
 align-items: center;
+width: 17.5%;
+padding-left: 17px;
 `
 const Left = styled.div`
 display: flex;
@@ -44,7 +47,7 @@ const SearchItem = styled.div`
 `
 const MainProfile = styled.div`
 display: flex;
-padding-right: 16px;
+padding-right: 35px;
 align-items: center;
 justify-content: flex-end;
 flex: 4;

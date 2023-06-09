@@ -66,7 +66,7 @@ let activeStyle = {
   justifyContent: "spaceAround",
   backgroundColor: "white",
   textDecoration: "none",
-  borderLeft: "3px solid #444791",
+  borderRight: "3.5px solid rgb(68, 71, 145)"
 };
 let unactiveStyle = {
   margin: "0",

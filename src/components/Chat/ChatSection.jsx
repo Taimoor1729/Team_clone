@@ -54,7 +54,7 @@ useEffect(() => {
       </StyledHeading>
 
 
-        <div className="chat-section-data"   style={{ overflowY : ' scroll' }}>
+        <div className="chat-section-data"   style={{     overflow: hidden; }}>
       
       { mymessage?.map((item) => (
         <div style={{marginLeft: "25px"}}>

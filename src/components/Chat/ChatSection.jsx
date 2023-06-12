@@ -26,14 +26,15 @@ const ChatSection = () => {
   const [input, setInput] = useState("")
   const location = useLocation();
   const { state } = location;
-  console.log("inside of the chat section ", state);
   const message = state?.mysms;
   const mymessage =state?.sangi;
   // state?.sangi
 
 const  storedata = ( ) => {
+  if(input.trim().length !== 0) {
   message.push(input);
   setInput("")
+  }
 }
 
 useEffect(() => {
@@ -54,7 +55,7 @@ useEffect(() => {
       </StyledHeading>
 
 
-        <div className="chat-section-data"   style={{     overflow: hidden; }}>
+        <div className="chat-section-data"   style={{ overflow: "hidden" }}>
       
       { mymessage?.map((item) => (
         <div style={{marginLeft: "25px"}}>

@@ -4,8 +4,6 @@ import styled from "styled-components";
 import "./team.css";
 
 const Containner = styled.div`
-  /* background-color: aliceblue; */
-  /* width: 100%; */
   height: 95%;
   justify-content: space-between;
   /* width: 852px; */
@@ -82,19 +80,35 @@ const Button = styled.button`
 const TeamSection = () => {
   const [form, setForm] = useState(false);
   const [message, setMessage] = useState("");
+
   const location = useLocation();
   const { state } = location;
-  console.log("data in location", location)
-  // const Condition = location.path === /teams/routes
-  // console.log(state?.messagies);
+  const { messagies } = state
+
+  const [data, setData] = useState(messagies)
+  console.log("data in state", state)
   console.log("all the data in the location", location.pathname);
-  const feeds = state?.messagies;
+  console.log("what is in the messagies", messagies)
+
 
   const storedata = () => {
-    feeds?.push(message);
-    setMessage("");
-    setForm(false);
+
+    const newMessage = {
+      id: state.messagies.length + 1,
+      name: "Lorem Generator",
+      description: message,
+      img: 'https://cdn-icons-png.flaticon.com/128/2202/2202112.png',
+    }
+
+    setData((prevState) => [...prevState, newMessage])
+
+    if (message.trim().length !== 0) {
+      messagies.push(newMessage);
+      setMessage("");
+      setForm(false);
+    }
   };
+
   const inputForm = () => {
     return (
       <div className="inputofchat">
@@ -113,18 +127,13 @@ const TeamSection = () => {
     );
   };
 
-  // if(Condition){
-  //   return(
-  //     console.log("the data is in routes folder")
-  //   )
-  // }
 
   return (
     <div
       style={{
         boxShadow: "rgb(231 231 231) -15px 0px 10px -10px ",
-        // width: "50rem",
-        height: "100%",
+        width: "77em",
+        display: "flex"
       }}
     >
       <Containner>
@@ -132,7 +141,7 @@ const TeamSection = () => {
           <h3 className="heading">{state?.name}</h3>
         </Heading>
         <Feeds>
-          {feeds?.map((item) => (
+          {data?.map((item) => (
             <>
               <Wrapper>
                 <input
@@ -167,6 +176,5 @@ const TeamSection = () => {
   );
 };
 
-// export default TeamSection;
 
 export default TeamSection

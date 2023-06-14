@@ -2,8 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./moddel.css";
+import styled from "styled-components";
 
-
+const H1 =styled.h1`
+font-size: 1.5em
+` 
 
 
 
@@ -46,7 +49,7 @@ await axios
       <div className="modalContainer">
         
         <div className="titlename" >
-          <h1>Register Here</h1>
+          <H1>Register Here</H1>
         </div>
         <form onSubmit={handleSubmit}>
           <input

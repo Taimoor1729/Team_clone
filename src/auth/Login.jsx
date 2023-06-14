@@ -1,11 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-
-
 import "./Auth.css";
-
 import Model from "./compo/Model";
 
 const Modal = () => {
@@ -19,10 +15,6 @@ const Modal = () => {
   const handleSubmit = async (e) => {
     console.log(username, password)
     e.preventDefault();
-    // var item = JSON.parse(localStorage.getItem("form"));
-   
-
-    // connecting to backend
     await axios
     .post("http://localhost:5000/login",{
       username,
@@ -34,7 +26,7 @@ console.log("inside of login axios res ",res);
 // return navigate("/chat")
 if(res.data){
 
-const localStore = localStorage.setItem("jasonWEbToken", JSON.stringify(res.data.data.jwt))
+  const localStore = localStorage.setItem("jasonWEbToken", JSON.stringify(res.data.data.jwt))
 localStore && navigate("/chat/ali")
 }
 // if(localStore){return navigate("chat", { replace: true })}
@@ -56,7 +48,7 @@ localStore && navigate("/chat/ali")
   
 
   return (
-    <div className="wrapper">
+    <div className="wrappers">
       <div className="form">
         <h1 className="title">Welcome to Microsoft Teams</h1>
         <form onSubmit={handleSubmit}>

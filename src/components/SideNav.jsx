@@ -65,7 +65,7 @@ let unactiveStyle = {
   height: "60px",
   display: "flex",
   flexDirection: "column",
-  marginBottom: "5px",
+  // marginBottom: "5px",
   alignItems: "center",
   position: "relative",
   fontSize : '13px',

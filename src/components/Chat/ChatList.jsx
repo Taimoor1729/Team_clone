@@ -58,7 +58,7 @@ let activeStyle = {
   height: "50px",
   display: "flex",
   color: "#444791",
-  marginBottom: "10px",
+  // marginBottom: "10px",
   position: "relative",
   gap :"15px",
   flexDirection: "row",
@@ -66,7 +66,9 @@ let activeStyle = {
   justifyContent: "spaceAround",
   backgroundColor: "white",
   textDecoration: "none",
-  borderRight: "3.5px solid rgb(68, 71, 145)"
+  borderRight: "3.5px solid rgb(68, 71, 145)",
+  paddingTop: '5px',
+  paddinBottom: '5px',
 };
 let unactiveStyle = {
   margin: "0",
@@ -76,13 +78,15 @@ let unactiveStyle = {
   height: "50px",
   display: "flex",
   color: "#757575",
-  marginBottom: "10px",
+  // marginBottom: "10px",
   position: "relative",
   gap: "15px",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "spaceAround",
   textDecoration: "none",
+  paddingTop: '5px',
+  paddinBottom: '5px',
 };
 
 

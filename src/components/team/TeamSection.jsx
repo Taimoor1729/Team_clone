@@ -100,10 +100,11 @@ const TeamSection = () => {
       img: 'https://cdn-icons-png.flaticon.com/128/2202/2202112.png',
     }
 
-    setData((prevState) => [...prevState, newMessage])
+   
 
     if (message.trim().length !== 0) {
-      messagies.push(newMessage);
+      setData((prevState) => [...prevState, newMessage])
+      // messagies.push(newMessage);
       setMessage("");
       setForm(false);
     }

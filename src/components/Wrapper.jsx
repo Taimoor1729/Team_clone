@@ -9,14 +9,12 @@ import Navbar from "./Navbar";
 import SideNav from "./SideNav";
 import TeamsList from "./team/TeamsList";
 import TeamSection from "./team/TeamSection";
-// import PrivateCompo from "./PrivateCompo";
 import Calender from "./calender/Calender";
 import Calls from "./calls/Calls";
 import TeamItems from "./team/TeamItems";
 import { Activities } from "../Data/sidebarDataArray";
 
 const Wrapper = () => {
-  // const  jasonToken = JSON.parse(localStorage.getItem("jwt"))
 
   return (
     <div>

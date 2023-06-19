@@ -15,7 +15,6 @@ const [arry, setArry] = useState(arrys)
 
 const addingData = (input) => {
     console.log("inside of the", input);
-    debugger
     if(input.length !== 0){
     arry?.push(input);
     setArry(arry);
@@ -50,10 +49,7 @@ const addingData = (input) => {
                     }
 
 
-            {/* <div className='wrapper'>
-            <i class="fi fi-rr-user-add" style={{fontSize : '30px'}}></i>
-                <h3>Create a Team</h3>
-            </div> */}
+         
 
         </div>
 

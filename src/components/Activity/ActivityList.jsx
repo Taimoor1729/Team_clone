@@ -68,9 +68,6 @@ let unactiveStyle = {
 
 
 function ActivityList() {
-  // const navigate = useNavigate()
-  
-  // useEffect(() => {navigate('/activity/Root1')}, [])
   return (
 
     <div style={{ display: "flex", boxShadow: "rgb(231 231 231) -15px 0px 10px -10px " }}>

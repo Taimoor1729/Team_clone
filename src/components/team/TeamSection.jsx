@@ -104,7 +104,6 @@ const TeamSection = () => {
 
     if (message.trim().length !== 0) {
       setData((prevState) => [...prevState, newMessage])
-      // messagies.push(newMessage);
       setMessage("");
       setForm(false);
     }
